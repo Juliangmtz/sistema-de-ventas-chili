@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CHILIWINGS APP</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/Chiliwings App Y sistema/chiliwings.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/Chiliwings App Y sistema/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="/Chiliwings App Y sistema/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<style>
+  /* Contenedor general */
+  #ordenesSection {
+      display: flex;
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 25px;
+      background-color: #f9f5ef;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+  }
+
+  /* Encabezado */
+  #ordenesSection h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #8b4513;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  /* Tabla */
+  #ordenesTable {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+  }
+
+  #ordenesTable th, #ordenesTable td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #dcdcdc;
+      color: #6b4f3a;
+  }
+
+  #ordenesTable th {
+      background-color: #f2e2d2;
+      font-weight: bold;
+  }
+
+  #ordenesTable tbody tr:hover {
+      background-color: #f9f5ef;
+  }
+
+  /* Botones */
+  .detallesBtn {
+      font-weight: 600;
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #d2691e;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .detallesBtn:hover {
+      background-color: #b34700;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+      #ordenesSection {
+          padding: 15px;
+      }
+
+      #ordenesTable th, #ordenesTable td {
+          font-size: 14px;
+          padding: 10px;
+      }
+  }
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Chiliwings</h1>
+        <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/Chiliwings App Y sistema/index.html" class="active">Inicio<br></a></li>
+          <li><a href="Sindicatos.html">Sindicato</a></li>
+          <li><a href="Empleados.html">Empleados</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="Clientes.html">Clientes</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+     
+      <a class="btn-getstarted" href="Cierre De Ventas.html">Cierre De Ventas.</a>
+
+      
+    </div>
+  </header>
+
+  <main class="main">
+
+   <!-- Hero Section -->
+  <!-- Hero Section -->
+  <section id="hero" class="hero section light-background py-5">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <!-- Left Side: Title -->
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <div class="hero-content">
+            <h1 data-aos="fade-up" class="text-primary mb-4">
+              Sistema De Cierre De Ventas<br>Chiliwings
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-secondary">
+              Seleccione el día, mes y año para realizar el cierre de ventas del restaurante.
+            </p>
+            <!-- New Button: Imprimir Registro -->
+            <div class="text-center mt-4">
+              <button id="imprimirRegistro" class="btn btn-secondary">Imprimir Registro</button>
+            </div>
+          </div>
+        </div>
+        <!-- Right Side: Date Picker -->
+        <div class="col-lg-6 order-1 order-lg-2">
+          <div class="date-picker-container bg-light p-4 rounded shadow" data-aos="fade-up" data-aos-delay="200">
+            <h5 class="text-center mb-3 text-dark">Día de Venta</h5>
+            <div class="d-flex justify-content-center mb-3">
+              <input type="date" id="diaVenta" class="form-control w-75" />
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <input 
+                type="password" 
+                id="contrasena" 
+                class="form-control w-75" 
+                placeholder="Ingrese la contraseña para confirmar" 
+              />
+            </div>
+            <div class="text-center">
+              <button id="confirmarDiaVenta" class="btn btn-primary">Confirmar Día de Venta</button>
+            </div>
+            <small class="text-muted d-block mt-2 text-center">
+              Use el calendario para elegir una fecha válida y confirme con una contraseña.
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+
+    <section id="ordenesSection">
+      <h1>Órdenes Registradas</h1>
+      <table id="ordenesTable" border="1">
+          <thead>
+              <tr>
+                  <th>Folio</th>
+                  <th>Fecha</th>
+                  <th>Número de Mesa</th>
+                  <th>Número de Personas</th>
+                  <th>Detalles</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Las órdenes se cargarán aquí dinámicamente -->
+          </tbody>
+      </table>
+  </section>
+
+ <!-- Modal Cierre de Orden -->
+<!-- Modal de Cierre de Orden -->
+<div id="cierreModal" style="display:none;">
+  <h3>Seleccionar Tipo de Cierre</h3>
+  <select id="tipoCierre">
+      <option value="efectivo">Efectivo</option>
+      <option value="tarjeta">Tarjeta</option>
+      <option value="rappi">Rappi</option>
+      <option value="entregas a domicilio">Entregas a Domicilio</option>
+      <option value="la casa invita">La Casa Invita</option>
+      <option value="orden anulada">Orden Anulada</option>
+  </select>
+
+  <label for="passwordCierre">Contraseña:</label>
+  <input type="password" id="passwordCierre" placeholder="Ingresa la contraseña" required>
+
+  <button id="confirmarCierre">Confirmar Cierre</button>
+  <button id="cancelarCierre">Cancelar</button>
+
+  <!-- Campo oculto para guardar el id de la orden -->
+  <input type="hidden" id="ordenIdParaCerrar">
+</div>
+
+<style>
+#cierreModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#cierreModal select, #cierreModal button {
+  margin-top: 10px;
+}
+
+#cierreModal button {
+  margin-right: 10px;
+}
+</style>
+
+  
+  
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Direcccion</h4>
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contacto</h4>
+            <p>
+              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
+              <strong>Email:</strong> <span>info@example.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Horarios</h4>
+            <p>
+              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
+              <strong>Sunday</strong>: <span>Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Jgmtz</strong> <span>Todos Los derechos reservados</span></p>
+      
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/Chiliwings App Y sistema/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/aos/aos.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/Chiliwings App Y sistema/assets/js/main.js"></script>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ordenesTableBody = document.querySelector('#ordenesTable tbody');
+    const cierreModal = document.getElementById('cierreModal');
+    const tipoCierreSelect = document.getElementById('tipoCierre');
+    const confirmarCierreBtn = document.getElementById('confirmarCierre');
+    const cancelarCierreBtn = document.getElementById('cancelarCierre');
+    const ordenIdParaCerrar = document.getElementById('ordenIdParaCerrar');
+    const passwordCierreInput = document.getElementById('passwordCierre');
+
+    const passwordValida = "1234";
+
+    const cargarOrdenes = async () => {
+        try {
+            const response = await fetch('https://pruebachiliwings.onrender.com/generarcomanda');
+            if (!response.ok) {
+                throw new Error('Error al obtener las órdenes');
+            }
+
+            const ordenes = await response.json();
+            console.log('Órdenes recibidas:', ordenes);
+
+            const ordenesAbiertas = ordenes.filter((orden) => 
+                orden.detalles.some((detalle) => detalle.tipoDeCierre === null)
+            );
+            console.log('Órdenes abiertas filtradas:', ordenesAbiertas);
+
+            ordenesTableBody.innerHTML = '';
+
+            ordenesAbiertas.forEach((orden) => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                    <td>${orden._id}</td>
+                    <td>${new Date(orden.fecha).toLocaleDateString()}</td>
+                    <td>${orden.numeroMesa}</td>
+                    <td>${orden.numeroPersonas}</td>
+                    <td>
+                        <button class="detallesBtn" data-id="${orden._id}">
+                            Ver Detalles
+                        </button>
+                        <button class="cierreOrdenBtn" data-id="${orden._id}">
+                            Cierre de Orden
+                        </button>
+                    </td>
+                `;
+                ordenesTableBody.appendChild(fila);
+            });
+
+            document.querySelectorAll('.detallesBtn').forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    const idOrden = e.target.dataset.id;
+                    mostrarDetallesOrden(ordenes.find((orden) => orden._id.toString() === idOrden));
+                });
+            });
+
+            document.querySelectorAll('.cierreOrdenBtn').forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    const ordenId = e.target.dataset.id;
+                    ordenIdParaCerrar.value = ordenId;
+                    cierreModal.style.display = 'block';
+                });
+            });
+        } catch (err) {
+            console.error('Error:', err.message);
+        }
+    };
+
+    const mostrarDetallesOrden = (orden) => {
+        if (!orden || !orden.detalles || orden.detalles.length === 0) {
+            alert('No hay detalles disponibles para esta orden.');
+            return;
+        }
+
+        let detallesTexto = `Detalles de la orden ${orden._id}:\n\n`;
+        orden.detalles.forEach((detalle, index) => {
+            detallesTexto += `Producto ${index + 1}:\n`;
+            detallesTexto += `- Producto: ${detalle.producto}\n`;
+            detallesTexto += `- Cantidad: ${detalle.cantidadProducto}\n`;
+            detallesTexto += `- Precio: $${detalle.precio.toFixed(2)}\n`;
+            if (detalle.infoExtra) {
+                detallesTexto += `- Información Extra: ${detalle.infoExtra}\n`;
+            }
+            detallesTexto += '\n';
+        });
+
+        alert(detallesTexto);
+    };
+
+    const limpiarContraseña = () => {
+        passwordCierreInput.value = '';
+    };
+
+    confirmarCierreBtn.addEventListener('click', async () => {
+        const ordenId = ordenIdParaCerrar.value;
+        const tipoCierre = tipoCierreSelect.value;
+        const passwordIngresada = passwordCierreInput.value;
+
+        if (passwordIngresada !== passwordValida) {
+            alert('Contraseña incorrecta. No se puede cerrar la orden.');
+            return;
+        }
+
+        try {
+            const response = await fetch(`https://pruebachiliwings.onrender.com/generarcomanda`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    idFolioOrden: ordenId,
+                    tipoDeCierre: tipoCierre
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Error al cerrar la orden');
+            }
+
+            const data = await response.json();
+            alert(`Orden cerrada con éxito con el tipo de cierre: ${data.detalleOrden.tipoDeCierre}`);
+            limpiarContraseña();
+            cierreModal.style.display = 'none';
+            cargarOrdenes();
+        } catch (error) {
+            console.error('Error al cerrar la orden:', error);
+            alert('Hubo un problema al cerrar la orden');
+        }
+    });
+
+    cancelarCierreBtn.addEventListener('click', () => {
+        limpiarContraseña();
+        cierreModal.style.display = 'none';
+    });
+
+    cargarOrdenes();
+});
+</script>
+
+  
+
+<!-- Script de JavaScript -->
+ <script>
+  document.addEventListener('DOMContentLoaded', async () => {
+  const diaVentaInput = document.getElementById('diaVenta');
+  const contrasenaInput = document.getElementById('contrasena');
+
+  // Obtener el día de venta actual del backend al cargar la página
+  try {
+    const response = await fetch('https://pruebachiliwings.onrender.com/diatrabajo');
+    if (response.ok) {
+      const data = await response.json();
+      if (data.diaVenta && data.diaVenta.diaTrabajo) {
+        diaVentaInput.value = data.diaVenta.diaTrabajo.split('T')[0]; // Mostrar la fecha en formato "YYYY-MM-DD"
+      }
+    } else {
+      console.warn('No se pudo obtener el día de venta actual.');
+    }
+  } catch (error) {
+    console.error('Error al obtener el día de venta actual:', error);
+  }
+
+  // Manejar el clic en el botón de confirmar
+  document.getElementById('confirmarDiaVenta').addEventListener('click', async () => {
+    const nuevaFecha = diaVentaInput.value;
+    const contrasena = contrasenaInput.value;
+
+    // Contraseña fija para validación
+    const CONTRASENA_VALIDA = "admin123";
+
+    // Validar fecha
+    if (!nuevaFecha) {
+      alert('Por favor, selecciona una fecha válida.');
+      return;
+    }
+
+    // Validar contraseña
+    if (contrasena !== CONTRASENA_VALIDA) {
+      alert('Contraseña incorrecta. Inténtalo de nuevo.');
+      return;
+    }
+
+    // Enviar la nueva fecha al backend
+    try {
+      const response = await fetch('https://pruebachiliwings.onrender.com/diatrabajo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ diaTrabajo: nuevaFecha }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Error desconocido');
+      }
+
+      const data = await response.json();
+      alert(`Día de venta configurado correctamente: ${data.diaVenta.diaTrabajo}`);
+
+      // Limpiar el campo de contraseña después de un cambio exitoso
+      contrasenaInput.value = '';
+    } catch (error) {
+      console.error('Error al configurar el día de venta:', error);
+      alert(`Error: ${error.message}`);
+    }
+  });
+});
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const imprimirRegistroBtn = document.getElementById('imprimirRegistro');
+
+  // Verificar si el botón existe antes de agregar el evento
+  if (!imprimirRegistroBtn) {
+      console.error("No se encontró el botón 'imprimirRegistro'");
+      return;
+  }
+
+  // Función para obtener las órdenes cerradas y generar un archivo de texto
+  const imprimirRegistro = async () => {
+      try {
+          // Hacer la solicitud GET para obtener las órdenes cerradas
+          const response = await fetch('https://pruebachiliwings.onrender.com/generarcomanda');
+          if (!response.ok) {
+              throw new Error('Error al obtener las órdenes cerradas');
+          }
+
+          const ordenes = await response.json();
+          console.log("Órdenes recibidas:", ordenes);
+
+          if (ordenes.length === 0) {
+              console.log('No se encontraron órdenes cerradas.');
+              return;
+          }
+
+          let texto = 'Registros de Órdenes Cerradas\n\n';
+
+          // Crear una representación en texto de cada orden
+          ordenes.forEach((orden) => {
+              texto += `ID de la Orden: ${orden._id}\n`;
+              texto += `Fecha: ${new Date(orden.fecha).toLocaleDateString()}\n`;
+              texto += `Número de Mesa: ${orden.numeroMesa}\n`;
+              texto += `Número de Personas: ${orden.numeroPersonas}\n`;
+              texto += `ID Folio Mesero: ${orden.idFolioMesero}\n`;
+              texto += `Día de Trabajo: ${new Date(orden.diaTrabajo).toLocaleDateString()}\n`;
+
+              orden.detalles.forEach((detalle, index) => {
+                  texto += `\nProducto ${index + 1}:\n`;
+                  texto += `Producto: ${detalle.producto}\n`;
+                  texto += `Cantidad: ${detalle.cantidadProducto}\n`;
+                  texto += `Precio: $${detalle.precio.toFixed(2)}\n`;
+
+                  // Verificar si el tipo de cierre está en los valores esperados
+                  if (['efectivo', 'tarjeta', 'rappi', 'entregas a domicilio', 'la casa invita', 'orden anulada'].includes(detalle.tipoDeCierre)) {
+                      texto += `Tipo de Cierre: ${detalle.tipoDeCierre}\n`;
+                  } else {
+                      texto += `Tipo de Cierre: No especificado\n`;
+                  }
+
+                  if (detalle.infoExtra) {
+                      texto += `Información Extra: ${detalle.infoExtra}\n`;
+                  }
+              });
+
+              texto += '\n-----------------------------------\n\n';
+          });
+
+          // Crear un blob con el contenido en formato de texto
+          const blob = new Blob([texto], { type: 'text/plain' });
+
+          // Crear un enlace para descargar el archivo
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = 'registros_ordenes_cerradas.txt';
+          link.click(); // Simular clic para descargar
+
+      } catch (err) {
+          console.error('Error:', err.message);
+      }
+  };
+
+  // Agregar el evento al botón para imprimir el registro
+  imprimirRegistroBtn.addEventListener('click', imprimirRegistro);
+});
+</script>
+
+
+</body>
+
+</html>

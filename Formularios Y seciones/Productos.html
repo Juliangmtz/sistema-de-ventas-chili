@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CHILIWINGS APP</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/Chiliwings App Y sistema/chiliwings.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/Chiliwings App Y sistema/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="/Chiliwings App Y sistema/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="/Chiliwings App Y sistema/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<style>
+/* Contenedor general */
+#form-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 25px;
+  background-color: #f9f5ef;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Formulario */
+#productoForm, #productosList {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 48%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos */
+#productoForm h3, #productosList h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #8b4513;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* Etiquetas */
+#productoForm label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #8b4513;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Campos de entrada */
+#productoForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+#productoForm input[type="text"]:focus {
+  border-color: #8b4513;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(139, 69, 19, 0.2);
+}
+
+/* Botones */
+#productoForm button {
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d2691e;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+#productoForm button:hover {
+  background-color: #b34700;
+}
+
+/* Listado de productos */
+#productosList {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+
+  overflow-y: auto;
+}
+
+#productosList li {
+  padding: 12px;
+  border-bottom: 1px solid #dcdcdc;
+  color: #6b4f3a;
+}
+
+#productosList li:hover {
+  background-color: #f2e2d2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #form-list-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  #productoForm, #productosList {
+    width: 100%;
+  }
+}
+
+
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Chiliwings</h1>
+        <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/Chiliwings App Y sistema/index.html" class="active">Inicio<br></a></li>
+          <li><a href="Sindicatos.html">Sindicato</a></li>
+          <li><a href="Empleados.html">Empleados</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="Clientes.html">Clientes</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+     
+      <a class="btn-getstarted" href="Cierre De Ventas.html">Cierre De Ventas.</a>
+
+      
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <div class="container">
+        <div class="row gy-4 justify-content-center justify-content-lg-between">
+          <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">Sisteme De Productos<br>Chiliwings</h1>
+            
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <div id="form-list-container" class="d-flex justify-content-between">
+      <!-- Formulario para Crear o Editar Producto -->
+      <form id="productoForm">
+        <h3>Crear o Editar Producto</h3>
+        
+        <label for="folio">Folio:</label>
+        <input type="text" id="folio" maxlength="15" required><br><br>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" maxlength="15" required><br><br>
+
+        <label for="menu">Menu:</label>
+        <select id="menu" name="menu" required>
+          <option value="">Selecciona un menú</option>
+          <option value="B.barra">B.barra</option>
+          <option value="Barra extra">Barra extra</option>
+          <option value="B.fuente">B.fuente</option>
+          <option value="Ensaladas">Ensaladas</option>
+          <option value="S Del Chef">S Del Chef</option>
+          <option value="Alitas">Alitas</option>
+          <option value="M De Niños">M De Niños</option>
+          <option value="Entradas">Entradas</option>
+          <option value="Hamburguesas">Hamburguesas</option>
+          <option value="Asador">Asador</option>
+          <option value="otros">otros</option>
+        </select>
+
+        <label for="costo">Costo:</label>
+        <input type="text" id="costo" maxlength="15" required><br><br>
+
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" maxlength="15" required><br><br>
+
+        <label for="venta">Venta:</label>
+        <input type="text" id="venta" maxlength="15" required><br><br>
+
+        <!-- Botones para Crear y Actualizar -->
+        <button type="button" onclick="createProducto()">Crear Producto</button>
+        <button type="button" onclick="updateProducto()">Actualizar Producto</button>
+      </form>
+
+      <!-- Listado de Productos -->
+      <div>
+        <h3>Listado de Productos</h3>
+        <div id="productosList" > 
+      </div>
+    </div>
+
+  
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/Chiliwings App Y sistema/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/aos/aos.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/Chiliwings App Y sistema/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/Chiliwings App Y sistema/assets/js/main.js"></script>
+  <script src="/Chiliwings App Y sistema/Scripts De Conexion/crear-productos.js"></script>
+
+</body>
+
+</html>
