@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Conexión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-top-color: #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .retry-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .retry-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="loading">
+        <div class="circle"></div>
+        <div class="message">Verificando conexión...</div>
+    </div>
+
+    <script>
+        function checkConnection() {
+            const app = document.getElementById('app');
+            
+            setTimeout(() => {
+                if (navigator.onLine) {
+                    app.innerHTML = `
+                        <div class="message">Usted está conectado. Vuelva pronto.</div>
+                    `;
+                    setTimeout(() => {
+                        window.location.href = 'menu-inicial.html'; //Ruta
+                    }, 3000);
+                } else {
+                    app.innerHTML = `
+                        <div class="message">
+                            Usted no tiene conexión a internet. Verifíquela.
+                        </div>
+                        <div style="font-size: 50px;">📶</div>
+                        <button class="retry-button" onclick="retryConnection()">Reintentar</button>
+                    `;
+                }
+            }, 2000); // Tiempo De Espera :v
+        }
+
+        function retryConnection() {
+            location.reload();
+        }
+
+        checkConnection();
+    </script>
+</body>
+</html>
